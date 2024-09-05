@@ -1,5 +1,13 @@
+import Header from "./components/header";
+import HomePage from "./pages/home";
+
 function App() {
-  return <h1>configurando ambiente</h1>;
+  return (
+    <>
+      <Header />
+      <HomePage />
+    </>
+  );
 }
 
 export default App;
