@@ -8,7 +8,7 @@ export default function Layout({ children }) {
     <>
       <Header />
       <main className="container--template">
-        <div>{children}</div>
+        <div className="container--template-contents">{children}</div>
       </main>
     </>
   );
