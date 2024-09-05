@@ -1,9 +1,10 @@
 import React from "react";
+import "./header.css";
 
 export default function Header() {
   return (
-    <header>
-      <img src="/vite.svg" alt="Logotipo do Vite" />
+    <header className="container--header">
+      <img src="/Logo.png" alt="Logotipo do Vite" />
       <nav>
         <a href="#">Home</a>
         <a href="#">Histórico</a>
