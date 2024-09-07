@@ -2,7 +2,7 @@ import React from "react";
 import { Status } from "../../components/status";
 import "./history.css";
 
-export default function HistoryPage() {
+export function HistoryPage() {
   return (
     <div className="container--history">
       <h1>Meu histórico</h1>

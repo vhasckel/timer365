@@ -4,7 +4,7 @@ import NewCycle from "../../components/new-cycle";
 import "./home.css";
 import Button from "../../components/button";
 
-export default function HomePage() {
+export function HomePage() {
   return (
     <div className="container--home">
       <NewCycle />

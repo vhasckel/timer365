@@ -1,13 +1,11 @@
-import HistoryPage from "./pages/history";
-// import HomePage from "./pages/home";
-import Layout from "./template";
+import { RouterProvider } from "react-router-dom";
+import { routes } from "./routes";
 
 function App() {
   return (
-    <Layout title={"Home"}>
-      {/* <HomePage /> */}
-      <HistoryPage />
-    </Layout>
+    <>
+      <RouterProvider router={routes} />
+    </>
   );
 }
 

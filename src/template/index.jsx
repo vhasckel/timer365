@@ -1,19 +1,17 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Header from "../components/header";
-import PropTypes from "prop-types";
 import "./template.css";
 
-export default function Layout({ children }) {
+export function Layout({ children }) {
   return (
     <>
       <Header />
       <main className="container--template">
-        <div className="container--template-contents">{children}</div>
+        <div className="container--template-contents">
+          <Outlet />
+        </div>
       </main>
     </>
   );
 }
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
