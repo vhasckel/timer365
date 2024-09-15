@@ -3,16 +3,30 @@ import "./new-cycle.css";
 import { useFormContext } from "react-hook-form";
 
 export default function NewCycle() {
-  const { register } = useFormContext();
+  const { register, formState } = useFormContext();
   return (
     <div className="container--new-cycle">
       <label htmlFor="task">Vou trabalhar em</label>
-      <input
-        type="text"
-        id="task"
-        placeholder="Criar timer365..."
-        {...register("task")}
-      />
+      <div className="container--input-form">
+        <input
+          type="text"
+          id="task"
+          placeholder="Criar timer365..."
+          {...register("task", {
+            required: {
+              value: true,
+              message: "Este campo é obrigatório",
+            },
+            minLength: {
+              value: 3,
+              message: "Este campo deve ter no mínimo 3 caracteres",
+            },
+          })}
+        />
+        {formState.errors.task && (
+          <p className="text-error">{formState.errors.task.message}</p>
+        )}
+      </div>
 
       <label htmlFor="minutesAmount">durante</label>
       <input
