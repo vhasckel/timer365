@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import { useCycle } from "../../contexts/cycle";
 import PropTypes from "prop-types";
 import { differenceInSeconds } from "date-fns";
 
 import "./timer.css";
 
-export default function Timer({ activeCycle }) {
+export default function Timer() {
+  const { activeCycle } = useCycle();
   // activeCycle.startDate
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(() => {
     if (activeCycle) {
