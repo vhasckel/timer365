@@ -34,7 +34,11 @@ export function CycleProvider({ children }) {
     };
 
     // setCycles([...cycles, newCycle])
-    setCycles((prevCycles) => [...prevCycles, newCycle]);
+    setCycles((prevCycles) => {
+      let newCycleState = [...prevCycles, newCycle];
+      localStorage.setItem("cycles", JSON.stringify(newCycleState));
+      return newCycleState;
+    });
     setActiveCycleId(id);
   }
 
